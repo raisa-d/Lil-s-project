@@ -150,6 +150,10 @@ body {
     width: 48dvw;
 }
 
+.prologueImg {
+    border-right: 2px dashed white
+}
+
 /* gifs */
 
 #fireflies,
