@@ -24,8 +24,8 @@ const callback = (entries, observer) => {
             const text = entry.target.getAttribute('data-text');
             typingEffect(targetElement, text, 60) //100ms per character
 
-            //stop observing section after it starts the effect
-            observer.unobserve(entry.target)
+            // //stop observing section after it starts the effect
+            observer.unobserve(entry.target);
         }
     });
 };
@@ -41,3 +41,26 @@ const observer = new IntersectionObserver(callback, {
 sections.forEach(section => {
     observer.observe(section)
 });
+
+//fade in images
+const dungeonButton = document.querySelector('#dungeonButton');
+dungeonButton.addEventListener('click', showTravelerImg);
+
+function showTravelerImg() {
+    document.querySelector('#travelerImg').classList.add('fade-in');
+}
+
+const travelerButton = document.querySelector('#travelerButton');
+travelerButton.addEventListener('click', showCastleImg);
+
+function showCastleImg() {
+    document.querySelector('#castleImg').classList.add('fade-in');
+}
+
+//transition from first few prologue scenes to wizard arc
+const castleButton = document.querySelector('#castleButton');
+castleButton.addEventListener('click', loadWizardArc);
+
+function loadWizardArc() {
+    document.querySelectorAll('.prologueScene').forEach(scene => scene.style.display = 'none')
+}

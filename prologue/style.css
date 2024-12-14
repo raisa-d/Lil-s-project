@@ -145,10 +145,12 @@ body {
 }
 
 /* traveler scenes */
-.scene-container img {
+.prologue-container img {
     height: 100dvh;
     width: 48dvw;
 }
+
+/* gifs */
 
 #fireflies,
 #crown,
@@ -258,6 +260,21 @@ button:after {
 
 #castle button {
     background-color: rgb(30, 35, 64);
+}
+
+/* fade in effect */
+.fade-in {
+    animation: fadeIn 4s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 /* ominous door  */
