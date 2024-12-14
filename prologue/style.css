@@ -147,11 +147,27 @@ table {
     width: 48dvw;
 }
 
+#fireflies,
+#crown,
+#sword,
+#wizardcat {
+    /* transform: scale(0.3); */
+    width: 13rem;
+    height: 12rem;
+    margin-top: -12rem;
+    padding-bottom: 1rem;
+}
+
+#sword {
+    position: absolute;
+    height: 12rem;
+}
+
 h3 {
     color: white;
     font-family: "Pixelify Sans", sans-serif;
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 2rem;
     padding-bottom: 1rem;
 }
 
@@ -194,7 +210,6 @@ button {
     font-size: 1.2rem;
     text-align: center;
     background-color: rgb(29, 83, 53);
-    /* display: block; */
     position: relative;
     padding: 20px 40px;
 
