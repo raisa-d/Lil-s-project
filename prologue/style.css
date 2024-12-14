@@ -288,11 +288,20 @@ button:after {
     }
 }
 
-.prologue-container {
+/* .prologue-container {
     display: none;
-}
+} */
 
 /* wizard scenes */
+
+.wizard-container {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    height: 100dvh;
+}
+
+
 /* .doorframe {
     display: flex;
     perspective: 900px;
@@ -350,9 +359,10 @@ button:after {
 } */
 
 .frontdoor {
-    position: absolute;
+    position: relative;
     margin-left: 50%;
     margin-left: 42%;
+    top: 22.4rem;
     width: 32rem;
     height: 22rem;
     transform-origin: left;

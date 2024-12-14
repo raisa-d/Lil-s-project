@@ -66,7 +66,13 @@ function showConvoImg() {
 
 //transition from first few prologue scenes to wizard arc
 // document.querySelectorAll('.prologueScene').forEach(scene => scene.style.display = 'none');
+const convoButton = document.querySelector('#convoButton')
+convoButton.addEventListener('click', loadWizardScene)
+function loadWizardScene() {
+    document.querySelectorAll('.prologueScene').forEach(scene => scene.style.display = 'none')
+}
 
+//door toggle
 const doorelement = document.querySelector(".frontdoor");
 doorelement.addEventListener("click", toggleDoor);
 
