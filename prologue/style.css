@@ -288,8 +288,81 @@ button:after {
     }
 }
 
-/* wizard scenes */
+.prologue-container {
+    display: none;
+}
 
+/* wizard scenes */
+/* .doorframe {
+    display: flex;
+    perspective: 900px;
+    transform-style: preserve-3d;
+}
+
+.door {
+    flex-grow: 1;
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: left center;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+}
+
+.door img {
+    position: absolute;
+    top: 0;
+    left: 10rem;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    width: 16rem;
+    height: 22rem;
+}
+
+.door .backdoor {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.doorframe:focus .door,
+.doorframe:hover .door {
+    transform: rotate3d(0, 1, 0, -130deg);
+} */
+
+/* <section class="doorframe" tabindex="0">
+<section class="door">
+    <img src="/img/door.png" class="frontdoor" alt="door">
+    <img src="/img/mountain.jpg" class="backdoor" alt="pixel mountains">
+</section> */
+
+.backdoor {
+    width: 16rem;
+    height: 22rem;
+    margin: 0 auto;
+    margin-top: 0.3rem;
+    margin-left: 50%;
+}
+
+/* .backdoor {
+    width: 14rem;
+    height: 22rem;
+    margin: 1rem;
+} */
+
+.frontdoor {
+    position: absolute;
+    margin-left: 50%;
+    margin-left: 42%;
+    width: 32rem;
+    height: 22rem;
+    transform-origin: left;
+    transition: all 0.5s ease-in-out;
+}
+
+.doorOpen {
+    /* transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg); */
+    transform: perspective(1200px) translateZ(0px) translateY(0px) rotateY(-104deg);
+}
 
 /* ominous door  */
 .ominous-door {
