@@ -138,7 +138,10 @@ table {
 /* keyblade cursor */
 * {
     cursor: url(https://cur.cursors-4u.net/games/gam-2/gam134.cur), auto !important;
-    /* overflow: hidden; */
+}
+
+body {
+    overflow-y: hidden;
 }
 
 /* traveler scenes */
@@ -151,7 +154,6 @@ table {
 #crown,
 #sword,
 #wizardcat {
-    /* transform: scale(0.3); */
     width: 13rem;
     height: 12rem;
     margin-top: -12rem;
