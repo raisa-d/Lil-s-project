@@ -57,10 +57,12 @@ function showCastleImg() {
     document.querySelector('#castleImg').classList.add('fade-in');
 }
 
-//transition from first few prologue scenes to wizard arc
 const castleButton = document.querySelector('#castleButton');
-castleButton.addEventListener('click', loadWizardArc);
+castleButton.addEventListener('click', showConvoImg);
 
-function loadWizardArc() {
-    document.querySelectorAll('.prologueScene').forEach(scene => scene.style.display = 'none')
+function showConvoImg() {
+    document.querySelector('#convoImg').classList.add('fade-in');
 }
+
+//transition from first few prologue scenes to wizard arc
+// document.querySelectorAll('.prologueScene').forEach(scene => scene.style.display = 'none');

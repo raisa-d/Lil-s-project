@@ -155,7 +155,8 @@ body {
 #fireflies,
 #crown,
 #sword,
-#wizardcat {
+#wizardcat,
+#twirlingbunny {
     width: 13rem;
     height: 12rem;
     margin-top: -12rem;
@@ -199,6 +200,12 @@ h3 {
 
 #castle h3 {
     color: rgb(26, 24, 52);
+}
+
+#convo {
+    display: flex;
+    /* background-color: rgb(2, 11, 22); */
+    background-color: rgb(5, 16, 32);
 }
 
 a {
@@ -276,6 +283,9 @@ button:after {
         opacity: 1;
     }
 }
+
+/* wizard scenes */
+
 
 /* ominous door  */
 .ominous-door {
