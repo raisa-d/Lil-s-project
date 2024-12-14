@@ -90,6 +90,7 @@ const countrysideDoor = document.querySelector('#countrysidedoor');
 
 mountainDoor.addEventListener('click', removeDoor);
 countrysideDoor.addEventListener('click', removeDoor);
+beachDoor.addEventListener('click', khDoor);
 
 function removeDoor(event) {
     //hide clicked door
@@ -109,4 +110,21 @@ function removeDoor(event) {
             document.querySelector('body').style.backgroundColor = 'rgb(1, 4, 0)';
         }, 3000);
     }
+}
+
+function khDoor() {
+    mountainDoor.style.display = 'none';
+    countrysideDoor.style.display = 'none'
+
+    document.querySelector('.doorSelectionText').innerText = 'the abandoned island package? great choice!';
+
+    setTimeout(() => {
+        beachDoor.style.display = 'none';
+    }, 1000);
+
+    setTimeout(() => {
+        document.querySelector('.wizard-container').style.display = 'none';
+        document.querySelector('.ominous-door').style.display = 'flex';
+        document.querySelector('body').style.backgroundColor = 'rgb(1, 4, 0)';
+    }, 3000);
 }
