@@ -17,7 +17,8 @@
         <section class="prologueScene" id="dungeon" data-text="you successfully fight your way out of the dungeon and secure its treasures">
             <img src="/img/dungeon.jpg" class="prologueImg fade-in" alt="pixel dungeon scene">
             <section class="story-text">
-                <img src="https://web.archive.org/web/20091027164414/http://www.geocities.com/cleothewarriormaiden/swordspin.gif" id="sword" alt="rotating sword">
+                <!-- <img src="https://web.archive.org/web/20091027164414/http://www.geocities.com/cleothewarriormaiden/swordspin.gif" id="sword" alt="rotating sword"> -->
+                <img src="/img/mcsword.webp" id="sword" alt="rotating blue sword">
                 <img src="/img/fireflies.webp" id="fireflies" alt="yellow, circular sparkles">
                 <h3 class="typing-text"></h3>
                 <a href="#traveler">
@@ -61,28 +62,39 @@
     </section>
 
     <section class="wizard-container">
-        <section class="wizardScene" id="chooseDoor" data-text="all you have to do is choose a door">
-            <h3 class="typing-text"></h3>
-            <!-- <img src="/img/dungeon.jpg" class="prologueImg" alt="pixel dungeon scene"> -->
-            <!-- <section class="story-text">
-                 <a href="#doorSelection">
-                    <button id="dungeonButton">made my choice</button>
-                </a> 
-            </section> -->
+        <section class="wizardScene" id="chooseDoor" data-text="...just choose a door">
+            <h3 class="doorSelectionText"></h3>
+       
             <section class="doorframe" tabindex="0">
-                <section class="door">
-                    <img src="/img/door.png" class="frontdoor" alt="door">
-                    <img src="/img/mountain.jpg" class="backdoor" alt="pixel mountains">
+                <section id="mountaindoor">
+                    <img src="/img/door.png" class="frontdoor" alt="light brown minecraft door">
+                    <img src="/img/mountain.jpg" class="backdoor" id="mountainDoorImg" alt="pixel image of mountains with waterfall">
                 </section>
-                
+                <section id="beachdoor">
+                    <img src="/img/door.png" class="frontdoor" alt="light brown minecraft door">
+                    <img src="/img/beach.jpg" class="backdoor" alt="pixel image of the beach">
+                </section>
+                <section id="countrysidedoor">
+                    <img src="/img/door.png" class="frontdoor" alt="light brown minecraft door">
+                    <img src="/img/countryside.jpg" class="backdoor" alt="pixel image of a field, maybe in the countryside">
+                </section>
             </section>
         </section>
     </section>
 
     <section class="ominous-door">
-        <!-- marquee text -->
-        <h2>safe travels!</h2>
+        <section class="marquee-topcontainer">
+            <section class="marquee marquee-top">
+                safe travels ! safe travels ! safe travels ! safe travels ! safe travels !
+            </section>
+        </section> 
         <img src="/img/khdoor.webp" alt="">
+
+        <section class="marquee-bottomcontainer">
+            <section class="marquee marquee-bottom">
+                good luck ! stay hydrated ! don't eat strange plants ! keep a journal !
+            </section>
+        </section> 
     </section>
     
     <script src="/prologue/main.js"></script>

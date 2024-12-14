@@ -15,6 +15,14 @@ function typingEffect(element, text, speed) {
     updateText();
 }
 
+// const mountainDoorImg = document.querySelector('#mountainDoorImg');
+// mountainDoorImg.addEventListener('load', function () {
+//     let doorSelectionElement = document.querySelector('.doorSelectionText');
+//     let doorSelectionText = document.querySelector('.wizardScene').getAttribute('data-text');
+//     typingEffect(doorSelectionElement, doorSelectionText, 300)
+// })
+
+
 //callback for IntersectionObserver
 const callback = (entries, observer) => {
     entries.forEach(entry => {
@@ -34,7 +42,6 @@ const callback = (entries, observer) => {
 const sections = document.querySelectorAll('.prologueScene');
 const observer = new IntersectionObserver(callback, {
     root: null, //viewport is root
-    threshold: 1 //trigger when whole section in view **
 });
 
 //observe all sections
@@ -64,18 +71,42 @@ function showConvoImg() {
     document.querySelector('#convoImg').classList.add('fade-in');
 }
 
-//transition from first few prologue scenes to wizard arc
-// document.querySelectorAll('.prologueScene').forEach(scene => scene.style.display = 'none');
+//transition from first few prologue scenes to wizard arc door scenes
 const convoButton = document.querySelector('#convoButton')
 convoButton.addEventListener('click', loadWizardScene)
 function loadWizardScene() {
-    document.querySelectorAll('.prologueScene').forEach(scene => scene.style.display = 'none')
+    document.querySelectorAll('.prologueScene').forEach(scene => scene.style.display = 'none');
+    document.querySelector('.wizard-container').style.display = 'flex'
+
+    let doorSelectionElement = document.querySelector('.doorSelectionText');
+    let doorSelectionText = document.querySelector('.wizardScene').getAttribute('data-text');
+    typingEffect(doorSelectionElement, doorSelectionText, 80)
 }
 
-//door toggle
-const doorelement = document.querySelector(".frontdoor");
-doorelement.addEventListener("click", toggleDoor);
+//disappearing doors - wizard arc
+const mountainDoor = document.querySelector('#mountaindoor');
+const beachDoor = document.querySelector('#beachdoor');
+const countrysideDoor = document.querySelector('#countrysidedoor');
 
-function toggleDoor() {
-    doorelement.classList.toggle("doorOpen");
+mountainDoor.addEventListener('click', removeDoor);
+countrysideDoor.addEventListener('click', removeDoor);
+
+function removeDoor(event) {
+    //hide clicked door
+    event.target.style.display = 'none';
+
+    //are both doors hidden? 
+    if (mountainDoor.style.display === 'none' && countrysideDoor.style.display === 'none') {
+        document.querySelector('.doorSelectionText').innerText = 'the abandoned island package? great choice!';
+
+        setTimeout(() => {
+            beachDoor.style.display = 'none';
+        }, 1000);
+
+        setTimeout(() => {
+            document.querySelector('.wizard-container').style.display = 'none';
+            document.querySelector('.ominous-door').style.display = 'flex';
+            document.querySelector('body').style.backgroundColor = 'rgb(1, 4, 0)';
+        }, 3000);
+    }
 }
