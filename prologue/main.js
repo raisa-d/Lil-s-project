@@ -127,4 +127,8 @@ function khDoor() {
         document.querySelector('.ominous-door').style.display = 'flex';
         document.querySelector('body').style.backgroundColor = 'rgb(1, 4, 0)';
     }, 3000);
+
+    setTimeout(() => {
+        window.location.href = '../stats/index.html';
+    }, 7500);
 }
