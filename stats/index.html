@@ -3,12 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stats/style.css">
      <!-- google font: pixelify sans -->
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <title>Lil's Stats</title>
 </head>
 <body>
-    
+    <img src="/img/leaves.webp" class="leaves" id="left-leaves" alt="falling leaves">
+    <img src="/img/leaves.webp" class="leaves" id="right-leaves" alt="falling leaves">
+
+    <section class="homepage-container">
+        <nav class="sidenav">
+            <div class="signpost"></div>
+            <ul>
+                <li><a href="#">
+                        <!-- <img src="/img/hi.webp" id="hellobear" alt="bear waving hi"> -->
+                        <button class="navbutton" id="hello-button">home</button>
+                    </a>
+                </li>
+                <li><a href="#">
+                        <!-- <img src="/img/music.webp" id="headphones" alt="blue headphones with music notes floating above"> -->
+                        <button class="navbutton" id="music-button">music</button>
+                    </a>
+                </li>
+                <li><a href="#">
+                    <!-- <img src="/img/envelopes.webp" id="envelopes" alt="3 floating envelopes"> -->
+                    <button class="navbutton" id="mail-button">message</button>
+                </a>
+            </li>
+            </ul>
+        </nav>
+
+        <section class="stats-screen">
+            <div class="topbar">
+                <button id="exitButton">x</button>
+            </div>
+        </section>
+    </section>
 </body>
 </html>
