@@ -88,20 +88,20 @@ const mountainDoor = document.querySelector('#mountaindoor');
 const beachDoor = document.querySelector('#beachdoor');
 const countrysideDoor = document.querySelector('#countrysidedoor');
 
-mountainDoor.addEventListener('click', removeDoor);
+beachDoor.addEventListener('click', removeDoor);
 countrysideDoor.addEventListener('click', removeDoor);
-beachDoor.addEventListener('click', khDoor);
+mountainDoor.addEventListener('click', khDoor);
 
 function removeDoor(event) {
     //hide clicked door
     event.target.style.display = 'none';
 
     //are both doors hidden? 
-    if (mountainDoor.style.display === 'none' && countrysideDoor.style.display === 'none') {
-        document.querySelector('.doorSelectionText').innerText = 'the abandoned island package? great choice!';
+    if (beachDoor.style.display === 'none' && countrysideDoor.style.display === 'none') {
+        document.querySelector('.doorSelectionText').innerText = 'the cursed mountain package? great choice!';
 
         setTimeout(() => {
-            beachDoor.style.display = 'none';
+            mountainDoor.style.display = 'none';
         }, 1000);
 
         setTimeout(() => {
@@ -113,13 +113,13 @@ function removeDoor(event) {
 }
 
 function khDoor() {
-    mountainDoor.style.display = 'none';
+    beachDoor.style.display = 'none';
     countrysideDoor.style.display = 'none'
 
-    document.querySelector('.doorSelectionText').innerText = 'the abandoned island package? great choice!';
+    document.querySelector('.doorSelectionText').innerText = 'the cursed mountain package? great choice!';
 
     setTimeout(() => {
-        beachDoor.style.display = 'none';
+        mountainDoor.style.display = 'none';
     }, 1000);
 
     setTimeout(() => {
