@@ -456,7 +456,7 @@ textarea {
     top: -13rem;
     margin: 0 auto;
     font-size: 2rem;
-    width: 45rem;
+    width: 50rem;
     height: 20rem;
 }
 
@@ -482,4 +482,11 @@ textarea {
 
 .brown {
     background-color: rgb(96, 60, 29);
+}
+
+#charlieScream {
+    display: none;
+    position: absolute;
+    bottom: 3rem;
+    left: 10rem;
 }

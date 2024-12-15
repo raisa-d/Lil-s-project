@@ -47,6 +47,7 @@ function greenhouseMood() {
 
     //remove cliff conditions
     document.querySelector('.homepage-container').classList.remove('cliffBg');
+    document.querySelector('#charlieScream').style.display = 'none';
 }
 
 //plant audio picker
@@ -65,11 +66,6 @@ plants.forEach(plant => {
         audioPlayer.play();
     });
 })
-
-//plant 1: Sugar High - Jeremy Korpas.mp3
-//plant 2: where'd the sun go - Ryan McCaffrey
-//plant 3: moving in the shadows - the soundlings
-//plant 4: under the sun - everet almond
 
 //clicking hiking trail button 
 const messageButton = document.querySelector('#message-button');
@@ -102,6 +98,9 @@ function screamInput() {
     document.querySelector('textarea').style.visibility = 'hidden';
     yellButton.style.visibility = 'hidden';
 
+    //show charlie brown screaming
+    document.querySelector('#charlieScream').style.display = 'block';
+
     //reset text and remove animation
     screamingSpace.innerText = '';
     screamingSpace.classList.remove('show-text');
@@ -120,9 +119,13 @@ const yellAgainButton = document.querySelector('#yell-again');
 yellAgainButton.addEventListener('click', yellAgain)
 
 function yellAgain() {
+    //hide reset button
     yellAgainButton.style.visibility = 'hidden';
+    //show text area and initial yell button
     document.querySelector('textarea').style.visibility = 'visible';
     yellButton.style.visibility = 'visible';
+    //hide charlie brown screaming
+    document.querySelector('#charlieScream').style.display = 'none';
 }
 
 //home nav button click
@@ -138,6 +141,7 @@ function goHome() {
     document.querySelector('#greenhouse-topbar').classList.remove('purple');
     document.querySelector('nav').classList.remove('purple');
     document.querySelector('audio').style.visibility = 'hidden';
-    //show cliff bg
+    //remove cliff effects
     document.querySelector('.homepage-container').classList.remove('cliffBg');
+    document.querySelector('#charlieScream').style.display = 'none';
 }
