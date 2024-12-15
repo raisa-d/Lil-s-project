@@ -143,7 +143,7 @@ table {
 
 body {
     overflow: hidden;
-    /* background-color: rgb(143, 184, 109); */
+    background-color: rgb(143, 184, 109);
 }
 
 .homepage-container {
@@ -277,8 +277,8 @@ nav button {
 }
 
 .questions {
-    height: 33rem;
-    margin-top: 15rem;
+    height: 22rem;
+    margin-top: 2rem;
     background-color: pink;
     flex: 2;
     text-align: center;
@@ -300,7 +300,8 @@ nav button {
 
 /* stats panel */
 
-.statspanel {
+.statspanel,
+.credits {
     width: 21rem;
     height: 18rem;
     margin-left: 1rem;
@@ -308,13 +309,26 @@ nav button {
     background-color: rgb(74, 136, 97);
 }
 
-.statspanel h3 {
+.statspanel h3,
+.credits h3 {
     font-family: "Pixelify Sans", sans-serif;
     color: white;
     text-align: center;
     font-size: 1.7rem;
     padding-top: 1.3rem;
     padding-bottom: 2rem;
+}
+
+.credits {
+    position: relative;
+    width: 41.4rem;
+    height: 13.7rem;
+    top: -11rem;
+    left: 21.5rem;
+}
+
+.credits-h3 {
+    padding-bottom: 0;
 }
 
 .stats-horizontal {
@@ -330,7 +344,7 @@ nav button {
 #starDivider {
     position: relative;
     left: 5rem;
-    top: -36rem;
+    top: -46rem;
 }
 
 /* greenhouse */
@@ -388,7 +402,8 @@ audio {
 /* message */
 
 .cliff {
-    display: flex;
+    display: none;
+    /* visibility: hidden; */
     font-family: "Pixelify Sans", sans-serif;
     justify-content: center;
     position: relative;
@@ -425,7 +440,6 @@ audio {
     transition: opacity 0.5s ease, transform 0.5s ease;
     overflow-y: scroll;
     scrollbar-width: none;
-    /* border: 2px solid green; */
 }
 
 .screaming-space::-webkit-scrollbar {
@@ -464,4 +478,8 @@ textarea {
 #yell-again {
     visibility: hidden;
     margin-top: -22rem;
+}
+
+.brown {
+    background-color: rgb(96, 60, 29);
 }

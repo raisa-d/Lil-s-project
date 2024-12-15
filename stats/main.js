@@ -36,12 +36,13 @@ greenhouseNav.addEventListener('click', greenhouseMood);
 function greenhouseMood() {
     console.log('greenhouse clicked');
     document.querySelector('.stats-screen').style.display = 'none';
+    document.querySelector('.cliff').style.display = 'none';
     document.querySelector('.greenhouse').style.display = 'flex'
     document.querySelector('.homepage-container').classList.add('greenhouseBg');
     document.querySelector('#greenhouse-topbar').classList.add('purple');
-
     document.querySelector('nav').classList.add('purple')
     document.querySelector('.greenhouse').style.backgroundColor = 'rgb(207, 218, 155)'
+    //show audio player
     document.querySelector('audio').style.visibility = 'visible';
 
     //remove cliff conditions
@@ -70,20 +71,23 @@ plants.forEach(plant => {
 //plant 3: moving in the shadows - the soundlings
 //plant 4: under the sun - everet almond
 
-//clicking message button 
+//clicking hiking trail button 
 const messageButton = document.querySelector('#message-button');
 messageButton.addEventListener('click', loadCliffConditions);
 
 function loadCliffConditions() {
     document.querySelector('.greenhouse').style.display = 'none';
     document.querySelector('.stats-screen').style.display = 'none';
+    document.querySelector('.cliff').style.display = 'flex';
     //undo greenhouse effects
     document.querySelector('.homepage-container').classList.remove('greenhouseBg');
     document.querySelector('#greenhouse-topbar').classList.remove('purple');
     document.querySelector('nav').classList.remove('purple');
-
     document.querySelector('audio').style.visibility = 'hidden';
+    //show cliff bg + color changes
     document.querySelector('.homepage-container').classList.add('cliffBg');
+    document.querySelector('#cliff-topbar').classList.add('brown');
+    document.querySelector('.cliff').style.backgroundColor = 'rgba(191, 179, 112, 0.8)'
 }
 
 //yelling into the void
@@ -121,5 +125,19 @@ function yellAgain() {
     yellButton.style.visibility = 'visible';
 }
 
+//home nav button click
+const homeButton = document.querySelector('#hello-button');
+homeButton.addEventListener('click', goHome)
 
-//home nav button click: resetting 
+function goHome() {
+    document.querySelector('.greenhouse').style.display = 'none';
+    document.querySelector('.cliff').style.display = 'none';
+    document.querySelector('.stats-screen').style.display = 'block';
+    //undo greenhouse effects
+    document.querySelector('.homepage-container').classList.remove('greenhouseBg');
+    document.querySelector('#greenhouse-topbar').classList.remove('purple');
+    document.querySelector('nav').classList.remove('purple');
+    document.querySelector('audio').style.visibility = 'hidden';
+    //show cliff bg
+    document.querySelector('.homepage-container').classList.remove('cliffBg');
+}
