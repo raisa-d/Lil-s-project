@@ -109,6 +109,8 @@ function removeDoor(event) {
             document.querySelector('.ominous-door').style.display = 'flex';
             document.querySelector('body').style.backgroundColor = 'rgb(1, 4, 0)';
         }, 3000);
+
+        khDoor();
     }
 }
 
