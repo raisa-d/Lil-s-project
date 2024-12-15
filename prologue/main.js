@@ -15,14 +15,6 @@ function typingEffect(element, text, speed) {
     updateText();
 }
 
-// const mountainDoorImg = document.querySelector('#mountainDoorImg');
-// mountainDoorImg.addEventListener('load', function () {
-//     let doorSelectionElement = document.querySelector('.doorSelectionText');
-//     let doorSelectionText = document.querySelector('.wizardScene').getAttribute('data-text');
-//     typingEffect(doorSelectionElement, doorSelectionText, 300)
-// })
-
-
 //callback for IntersectionObserver
 const callback = (entries, observer) => {
     entries.forEach(entry => {
