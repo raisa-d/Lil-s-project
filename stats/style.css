@@ -159,7 +159,6 @@ body {
 }
 
 .signpost {
-    background-color: rgb(94, 41, 20);
     background-color: rgb(74, 136, 97);
     height: 75dvh;
     width: 0.4rem;
@@ -171,7 +170,6 @@ nav {
     align-items: center;
     position: absolute;
     top: 0;
-    /* border: 2px solid pink; */
     width: 14.5dvw;
     height: 100dvh;
 }
@@ -183,7 +181,6 @@ nav img {
 
 nav button {
     font-size: 1.4rem;
-    background-color: rgb(94, 41, 20);
     background-color: rgb(74, 136, 97);
     color: white;
     border-right: none;
@@ -366,4 +363,8 @@ nav button {
     background-size: 99.9%;
     width: 100dvw;
     background-repeat: no-repeat;
+}
+
+.purple {
+    background-color: rgb(48, 73, 84);
 }

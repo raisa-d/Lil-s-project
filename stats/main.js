@@ -35,7 +35,12 @@ greenhouseNav.addEventListener('click', greenhouseMood);
 
 function greenhouseMood() {
     console.log('greenhouse clicked');
-    document.querySelector('.homepage-container').classList.add('greenhouseBg')
+    document.querySelector('.homepage-container').classList.add('greenhouseBg');
+    document.querySelector('#greenhouse-topbar').classList.add('purple');
+
+    // const navbutton = document.querySelectorAll('.navbutton');
+    // navbutton.forEach(button => button.classList.add('purple'))
+    document.querySelector('nav').classList.add('purple')
 }
 
 //plant audio picker
@@ -59,3 +64,6 @@ plants.forEach(plant => {
 //plant 2: where'd the sun go - Ryan McCaffrey
 //plant 3: moving in the shadows - the soundlings
 //plant 4: under teh sun - everet almond
+
+
+//home nav button click: resetting 
