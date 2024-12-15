@@ -355,7 +355,15 @@ nav button {
 
 .audioplayer {
     position: relative;
-    /* margin-top: -32rem; */
     top: -38rem;
     left: 39rem;
+}
+
+.greenhouseBg {
+    position: absolute;
+    top: 0;
+    background-image: url('/img/dusty_lilac.png');
+    background-size: 99.9%;
+    width: 100dvw;
+    background-repeat: no-repeat;
 }

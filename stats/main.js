@@ -30,13 +30,13 @@ function nextDialogue() {
 };
 
 //greenhouse nav: changing the bg
-// const greenhouseNav = document.querySelector('#music-button');
-// greenhouseNav.addEventListener('click', greenhouseMood);
+const greenhouseNav = document.querySelector('#music-button');
+greenhouseNav.addEventListener('click', greenhouseMood);
 
-// function greenhouseMood() {
-//     console.log('greenhouse clicked');
-//     document.body.style.backgroundImage = "url('img/dusty_lilac.jpg')";
-// }
+function greenhouseMood() {
+    console.log('greenhouse clicked');
+    document.querySelector('.homepage-container').classList.add('greenhouseBg')
+}
 
 //plant audio picker
 const plants = document.querySelectorAll('.plant');
