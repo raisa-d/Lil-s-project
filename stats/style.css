@@ -143,7 +143,13 @@ table {
 
 body {
     overflow: hidden;
-    background-color: rgb(143, 184, 109);
+    /* background-color: rgb(143, 184, 109); */
+}
+
+.homepage-container {
+    background-image: url(/img/forestfloor.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #right-leaves {
@@ -322,10 +328,6 @@ nav button {
 
 /* greenhouse */
 
-.stats-screen {
-    display: none;
-}
-
 .greenhouse {
     font-family: "Pixelify Sans", sans-serif;
 }
@@ -367,4 +369,19 @@ nav button {
 
 .purple {
     background-color: rgb(48, 73, 84);
+}
+
+/* audioplayer */
+audio {
+    visibility: hidden;
+}
+
+/* message */
+
+/* .greenhouse {
+    display: none;
+} */
+
+.stats-screen {
+    display: none;
 }

@@ -41,6 +41,8 @@ function greenhouseMood() {
     // const navbutton = document.querySelectorAll('.navbutton');
     // navbutton.forEach(button => button.classList.add('purple'))
     document.querySelector('nav').classList.add('purple')
+    document.querySelector('.greenhouse').style.backgroundColor = 'rgb(207, 218, 155)'
+    document.querySelector('audio').style.visibility = 'visible';
 }
 
 //plant audio picker
