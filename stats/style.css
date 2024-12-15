@@ -211,8 +211,14 @@ nav button {
     margin-left: 6.7rem;
 }
 
-#mail-button:before {
-    margin-left: 7.7rem;
+#message-button {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+#message-button:before {
+    margin-left: 8.8rem;
+    margin-top: -2rem;
 }
 
 #hello-button,
@@ -223,7 +229,8 @@ nav button {
 /* stats screen */
 
 .stats-screen,
-.greenhouse {
+.greenhouse,
+.cliff {
     position: relative;
     left: 18rem;
     top: -27rem;
@@ -330,6 +337,7 @@ nav button {
 
 .greenhouse {
     display: none;
+    justify-content: center;
     font-family: "Pixelify Sans", sans-serif;
 }
 
@@ -378,3 +386,82 @@ audio {
 }
 
 /* message */
+
+.cliff {
+    display: flex;
+    font-family: "Pixelify Sans", sans-serif;
+    justify-content: center;
+    position: relative;
+    margin-top: -4rem;
+}
+
+.cliffBg {
+    background-image: url('/img/cliff.webp');
+}
+
+.cliff h2 {
+    position: absolute;
+    top: 4rem;
+    font-size: 1.5rem;
+}
+
+.cliff-instructions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.screaming-space {
+    position: relative;
+    display: inline-block;
+    font-size: 5.8rem;
+    text-align: center;
+    top: 7rem;
+    width: 73%;
+    height: 48%;
+    margin: 0 auto;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    /* border: 2px solid green; */
+}
+
+.screaming-space::-webkit-scrollbar {
+    display: none;
+}
+
+.screaming-space.show-text {
+    opacity: 1;
+    transform: scale(1);
+}
+
+textarea {
+    position: relative;
+    top: -13rem;
+    margin: 0 auto;
+    font-size: 2rem;
+    width: 45rem;
+    height: 20rem;
+}
+
+#yell-button,
+#yell-again {
+    position: relative;
+    top: 12rem;
+    width: 30%;
+    font-size: 1.1rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    margin: 0 auto;
+}
+
+#yell-button {
+    top: -8rem;
+}
+
+#yell-again {
+    visibility: hidden;
+    margin-top: -22rem;
+}

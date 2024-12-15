@@ -36,13 +36,16 @@ greenhouseNav.addEventListener('click', greenhouseMood);
 function greenhouseMood() {
     console.log('greenhouse clicked');
     document.querySelector('.stats-screen').style.display = 'none';
-    document.querySelector('.greenhouse').style.display = 'block'
+    document.querySelector('.greenhouse').style.display = 'flex'
     document.querySelector('.homepage-container').classList.add('greenhouseBg');
     document.querySelector('#greenhouse-topbar').classList.add('purple');
 
     document.querySelector('nav').classList.add('purple')
     document.querySelector('.greenhouse').style.backgroundColor = 'rgb(207, 218, 155)'
     document.querySelector('audio').style.visibility = 'visible';
+
+    //remove cliff conditions
+    document.querySelector('.homepage-container').classList.remove('cliffBg');
 }
 
 //plant audio picker
@@ -68,12 +71,55 @@ plants.forEach(plant => {
 //plant 4: under the sun - everet almond
 
 //clicking message button 
-const messageButton = document.querySelector('.mail-button');
+const messageButton = document.querySelector('#message-button');
 messageButton.addEventListener('click', loadCliffConditions);
 
 function loadCliffConditions() {
     document.querySelector('.greenhouse').style.display = 'none';
     document.querySelector('.stats-screen').style.display = 'none';
+    //undo greenhouse effects
+    document.querySelector('.homepage-container').classList.remove('greenhouseBg');
+    document.querySelector('#greenhouse-topbar').classList.remove('purple');
+    document.querySelector('nav').classList.remove('purple');
+
+    document.querySelector('audio').style.visibility = 'hidden';
+    document.querySelector('.homepage-container').classList.add('cliffBg');
 }
+
+//yelling into the void
+const yellButton = document.querySelector('#yell-button');
+yellButton.addEventListener('click', screamInput);
+
+function screamInput() {
+    const input = document.querySelector('textarea').value;
+    const screamingSpace = document.querySelector('.screaming-space');
+
+    //hide textarea & yell button
+    document.querySelector('textarea').style.visibility = 'hidden';
+    yellButton.style.visibility = 'hidden';
+
+    //reset text and remove animation
+    screamingSpace.innerText = '';
+    screamingSpace.classList.remove('show-text');
+
+    setTimeout(() => {
+        screamingSpace.innerText = input.toUpperCase();
+        screamingSpace.classList.add('show-text');
+    }, 200)
+
+    //show yell again button
+    document.querySelector('#yell-again').style.visibility = 'visible';
+}
+
+//yell again
+const yellAgainButton = document.querySelector('#yell-again');
+yellAgainButton.addEventListener('click', yellAgain)
+
+function yellAgain() {
+    yellAgainButton.style.visibility = 'hidden';
+    document.querySelector('textarea').style.visibility = 'visible';
+    yellButton.style.visibility = 'visible';
+}
+
 
 //home nav button click: resetting 
