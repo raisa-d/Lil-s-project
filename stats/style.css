@@ -201,7 +201,7 @@ nav button {
     border-left: 2.9rem solid rgb(74, 136, 97);
     border-top: 2.9rem solid transparent;
     margin-top: -2.1rem;
-    margin-left: 6.75rem;
+    margin-left: 7.81rem;
 }
 
 #hello-button:before {
@@ -327,4 +327,35 @@ nav button {
 
 .stats-screen {
     display: none;
+}
+
+.greenhouse {
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+.greenhouse h2 {
+    position: absolute;
+    top: 4rem;
+    margin-left: 9%;
+    font-size: 1.5rem;
+}
+
+.plant-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 12rem;
+}
+
+.plant-gallery img {
+    width: 12rem;
+    height: 12rem;
+}
+
+.audioplayer {
+    position: relative;
+    /* margin-top: -32rem; */
+    top: -38rem;
+    left: 39rem;
 }

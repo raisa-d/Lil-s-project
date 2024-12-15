@@ -24,7 +24,7 @@
                 </li>
                 <li><a href="#">
                         <!-- <img src="/img/music.webp" id="headphones" alt="blue headphones with music notes floating above"> -->
-                        <button class="navbutton" id="music-button">music</button>
+                        <button class="navbutton" id="music-button">greenhouse</button>
                     </a>
                 </li>
                 <li><a href="#">
@@ -77,8 +77,31 @@
             <div class="topbar">
                 <button id="exitButton">x</button>
             </div>
-        </section>
 
+            <h2>music has been found to help some plants grow. see what my plants' favorite tracks are!</h2>
+
+            <section class="plant-gallery">
+                <section class="plant1">
+                    <img src="/img/plant1.webp" class="plant" data-audio="track1" alt="plant">
+                    <p>rai</p>
+                </section>
+                <section class="plant2">
+                    <img src="/img/plant2.webp" class="plant" data-audio="track2" alt="plant">
+                    <p>luca</p>
+                </section>
+                <section class="plant3">
+                    <img src="/img/plant3.webp" class="plant" data-audio="track3" alt="plant">
+                    <p>pearl</p>
+                </section>
+                <section class="plant4">
+                    <img src="/img/plant4.webp" class="plant" data-audio="track4" alt="plant">
+                    <p>julien</p>
+                </section>
+            </section>
+        </section>
+        <div class="audioplayer">
+            <audio controls id="audio-player" muted preload="auto"></audio>
+        </div>
     </section>
 
     <script src="/stats/main.js"></script>

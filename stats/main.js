@@ -28,3 +28,34 @@ function nextDialogue() {
         replySpace.innerText = 'Have fun!'
     }
 };
+
+//greenhouse nav: changing the bg
+// const greenhouseNav = document.querySelector('#music-button');
+// greenhouseNav.addEventListener('click', greenhouseMood);
+
+// function greenhouseMood() {
+//     console.log('greenhouse clicked');
+//     document.body.style.backgroundImage = "url('img/dusty_lilac.jpg')";
+// }
+
+//plant audio picker
+const plants = document.querySelectorAll('.plant');
+const audioPlayer = document.getElementById('audio-player')
+
+plants.forEach(plant => {
+    plant.addEventListener('click', () => {
+        //get audio file name from data-audio-attribute
+        const audioFile = plant.getAttribute('data-audio');
+
+        //set source of audio player
+        audioPlayer.src = `audio/${audioFile}.mp3`
+
+        //play audio
+        audioPlayer.play();
+    });
+})
+
+//plant 1: Sugar High - Jeremy Korpas.mp3
+//plant 2: where'd the sun go - Ryan McCaffrey
+//plant 3: moving in the shadows - the soundlings
+//plant 4: under teh sun - everet almond
