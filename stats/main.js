@@ -34,7 +34,6 @@ const greenhouseNav = document.querySelector('#music-button');
 greenhouseNav.addEventListener('click', greenhouseMood);
 
 function greenhouseMood() {
-    console.log('greenhouse clicked');
     document.querySelector('.stats-screen').style.display = 'none';
     document.querySelector('.cliff').style.display = 'none';
     document.querySelector('.greenhouse').style.display = 'flex'
@@ -136,6 +135,13 @@ function goHome() {
     document.querySelector('.greenhouse').style.display = 'none';
     document.querySelector('.cliff').style.display = 'none';
     document.querySelector('.stats-screen').style.display = 'block';
+    //reset intro dialogue
+    replySpace.innerText = 'hi, i\'m Lil!'
+    index = 0;
+    replyButton.innerText = 'who is this diva?'
+    buttonIndex = 0;
+    replyButton.style.visibility = 'visible';
+
     //undo greenhouse effects
     document.querySelector('.homepage-container').classList.remove('greenhouseBg');
     document.querySelector('#greenhouse-topbar').classList.remove('purple');
