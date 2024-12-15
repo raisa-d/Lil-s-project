@@ -35,11 +35,11 @@ greenhouseNav.addEventListener('click', greenhouseMood);
 
 function greenhouseMood() {
     console.log('greenhouse clicked');
+    document.querySelector('.stats-screen').style.display = 'none';
+    document.querySelector('.greenhouse').style.display = 'block'
     document.querySelector('.homepage-container').classList.add('greenhouseBg');
     document.querySelector('#greenhouse-topbar').classList.add('purple');
 
-    // const navbutton = document.querySelectorAll('.navbutton');
-    // navbutton.forEach(button => button.classList.add('purple'))
     document.querySelector('nav').classList.add('purple')
     document.querySelector('.greenhouse').style.backgroundColor = 'rgb(207, 218, 155)'
     document.querySelector('audio').style.visibility = 'visible';
@@ -65,7 +65,15 @@ plants.forEach(plant => {
 //plant 1: Sugar High - Jeremy Korpas.mp3
 //plant 2: where'd the sun go - Ryan McCaffrey
 //plant 3: moving in the shadows - the soundlings
-//plant 4: under teh sun - everet almond
+//plant 4: under the sun - everet almond
 
+//clicking message button 
+const messageButton = document.querySelector('.mail-button');
+messageButton.addEventListener('click', loadCliffConditions);
+
+function loadCliffConditions() {
+    document.querySelector('.greenhouse').style.display = 'none';
+    document.querySelector('.stats-screen').style.display = 'none';
+}
 
 //home nav button click: resetting 

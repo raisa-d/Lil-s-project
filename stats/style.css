@@ -329,6 +329,7 @@ nav button {
 /* greenhouse */
 
 .greenhouse {
+    display: none;
     font-family: "Pixelify Sans", sans-serif;
 }
 
@@ -377,11 +378,3 @@ audio {
 }
 
 /* message */
-
-/* .greenhouse {
-    display: none;
-} */
-
-.stats-screen {
-    display: none;
-}
