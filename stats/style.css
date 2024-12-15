@@ -325,10 +325,12 @@ nav button {
     height: 13.7rem;
     top: -11rem;
     left: 21.5rem;
+    background-color: rgb(255, 248, 179);
 }
 
-.credits-h3 {
-    padding-bottom: 0;
+.credits h3 {
+    padding-bottom: 0.8rem;
+    color: rgb(74, 136, 97);
 }
 
 .stats-horizontal {
